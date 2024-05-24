@@ -1,5 +1,7 @@
 # NaturalBeauty-A platform for beautifying pictures shared by all people
 java，springboot，maven，thymeleaf，mybatis
+This is a pictures beautifying platform supporting over thirty types of filters including "Blur," "Negative," and "Grayscale," with features specifically developed for male users. It includes multi-person detection and chat room functions to facilitate team collaboration.
+
 ### homepage:
 
 ![主页](https://github.com/BeiwenZhang/NaturalBeauty-A-platform-for-beautifying-pictures-shared-by-all-people/assets/109596955/0165c23a-93c0-471a-a4de-6af07a7fc764)
