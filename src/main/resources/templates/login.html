@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" th:href="@{/icon.ico}"/>
+    <link rel="bookmark" th:href="@{/icon.ico}"/>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <script type="text/javascript" th:src="@{/js/fontawesome.js}"></script>
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+</head>
+
+<body>
+<div id="background">
+    <div class="signinform">
+        <h1>Natural Beauty</h1>
+        <!-- container -->
+        <div class="container">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h2>Login</h2>
+                    <form >
+                        <!--                        name-->
+                        <div class="input-group">
+                            <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                            <input id="name" name="name" type="text" placeholder="Username or Email">
+                        </div>
+                        <!--                        pwd-->
+                        <div class="input-group">
+                            <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                            <input id="pwd" name="pwd" type="Password" placeholder="Password">
+                        </div>
+                        <!--                        forget password-->
+                        <div class="form-row bottom">
+                            <a href="#url" class="forgot">Forgot password?</a>
+                        </div>
+
+
+                        <button class="btn btn-primary btn-block" type="button" onclick="onclick_method()">Login</button>
+                    </form>
+
+                    <!--                    sign up-->
+                    <p class="account">Don't have an account? <a href="/signup">Sign up</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+        <!-- footer -->
+        <div class="footer">
+            <p>&copy; 2023 Service login form. All Rights Reserved | Design by <a href="https://github.com/ezyxz"
+                                                                                  target="blank">Beiwen Zhang</a></p>
+        </div>
+        <!-- footer -->
+    </div>
+</div>
+
+
+
+
+</body>
+
+</html>

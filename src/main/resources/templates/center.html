@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/center.css}" />
+    <script>
+        // 将 JavaScript 代码嵌入到这里
+        function submitForm(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // 使用 fetch 发送 POST 请求更新用户的 profile 数据
+            fetch('/api/user/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Object.fromEntries(formData)),
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    // 在此处处理从服务器返回的数据
+                    alert('保存成功'); // 添加保存成功提示
+                })
+                .catch(error => {
+                    console.error('更新用户 profile 时出错:', error);
+                });
+        }
+
+        function openVip() {
+            // 弹出确认框
+            const confirmVip = confirm('是否要开通 VIP：一年20元？');
+
+            if (confirmVip) {
+                // 用户点击确认，执行相应的操作
+                alert('VIP 开通成功，扣款 20 元'); // 这里可以添加实际的开通 VIP 操作
+            } else {
+                // 用户点击取消，可以选择不执行任何操作或者给予提示
+                alert('您取消了开通 VIP');
+            }
+        }
+        function returnSelect() {
+            window.location.href="/select"
+        }
+    </script>
+
+    <style>
+        body {
+            background-image: url('背景.jpg'); /* 设置背景图片路径 */
+            background-size: cover; /* 使背景图片铺满整个页面 */
+            background-position: center; /* 将背景图片置中 */
+            color: white; /* 设置文本颜色，以确保在背景图片上有足够对比度 */
+            margin: 0; /* 去除 body 元素的默认外边距 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+
+        .profile-container {
+            width: 300px; /* 设置容器宽度 */
+            padding: 20px; /* 设置容器内边距 */
+            border-radius: 10px; /* 设置容器圆角 */
+            background-color: rgba(0, 0, 0, 0.6); /* 设置半透明黑色背景 */
+            margin-right: 40px; /* 将整个容器往左移动 20px */
+        }
+
+        h1 {
+            font-size: 36px; /* 设置大字标题字体大小 */
+            text-align: center; /* 居中对齐 */
+            margin-bottom: 20px; /* 底部外边距 */
+        }
+
+        label {
+            display: block; /* label变为块元素 */
+            margin-bottom: 5px; /* 底部外边距 */
+        }
+
+        select {
+            width: calc(100% - 16px); /* 输入框宽度减小，使用calc计算，以考虑边距 */
+            padding: 8px; /* 输入框内边距 */
+            margin-bottom: 15px; /* 底部外边距 */
+        }
+
+        input {
+            width: calc(100% - 16px); /* 输入框宽度减小，使用calc计算，以考虑边距 */
+            padding: 8px; /* 输入框内边距 */
+            margin-bottom: 15px; /* 底部外边距 */
+            background-color: lightgray; /* 设置输入框背景颜色为浅灰色 */
+        }
+
+        button {
+            padding: 8px 16px; /* 按钮内边距 */
+            margin-bottom: 15px; /* 底部外边距 */
+        }
+
+    </style>
+</head>
+<body>
+<div class="profile-container">
+    <h1>个人中心</h1>
+    <form id="profileForm" th:action="@{/api/user/update}" method="post" onsubmit="return submitForm(event)">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" th:value="${userProfile.name}">
+
+        <label for="constellation">星座:</label><input type="text" id="con" name="con" th:value="${userProfile.constellation}"readonly>
+        <!-- 使用输入框选择星座 -->
+        <select id="constellation" name="constellation" th:value="${userProfile.constellation}">
+            <option value="白羊座">白羊座</option>
+            <option value="金牛座">金牛座</option>
+            <option value="双子座">双子座</option>
+            <option value="巨蟹座">巨蟹座</option>
+            <option value="狮子座">狮子座</option>
+            <option value="处女座">处女座</option>
+            <option value="天秤座">天秤座</option>
+            <option value="天蝎座">天蝎座</option>
+            <option value="射手座">射手座</option>
+            <option value="摩羯座">摩羯座</option>
+            <option value="水瓶座">水瓶座</option>
+            <option value="双鱼座">双鱼座</option>
+        </select>
+
+        <label for="gender">性别:</label><input type="text" id="gen" name="gen" th:value="${userProfile.gender}"readonly>
+        <!-- 使用输入框选择性别 -->
+        <select id="gender" name="gender" th:value="${userProfile.gender}">
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+
+        <label id="isVip">是否是 VIP:</label><input type="text" id="vip" name="vip" th:value="${userProfile.isVip}"readonly>
+
+        <input type="hidden" id="id" name="id" th:value="${userProfile != null ? userProfile.id : ''}">
+
+        <!-- 隐藏的密码字段 -->
+        <input type="hidden" id="pwd" name="pwd" th:value="${userProfile != null ? userProfile.pwd : ''}">
+        <button type="submit">保存</button>
+        <button type="button" onclick="openVip()">开通 VIP</button>
+        <button type="button" onclick="returnSelect()">返回菜单</button>
+    </form>
+</div>
+
+<!-- 在Thymeleaf表达式之前定义userProfile变量 -->
+<script th:inline="javascript">
+    var userProfile = /*[[${userProfile}]]*/ null;
+</script>
+
+<!-- 将脚本移到 body 标签之后 -->
+
+</body>
+</html>

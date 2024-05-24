@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>真颜-菜单</title>
+    <link rel="shortcut icon" th:href="@{/static/icon.ico}"/>
+    <link rel="bookmark" th:href="@{/static/icon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/select.css}"/>
+    <script type="text/javascript" th:src="@{/js/select.js}"></script>
+
+</head>
+<body>
+<div id="background">
+    <h4>@Author: BeiwenZhang</h4>
+    <div id="div_p1">
+        <img class="except_img" th:src="@{/img/p1.jpg}"/>
+
+        <div id="BeautifyImagesObserve">
+            <div id="BeautifyImages_div">
+                <button id="BeautifyImages_button" type="button" onclick="BeautifyImages_button_onclick()">BeautifyImages</button>
+            </div>
+
+            <div id="Observe_div">
+                <button id="Observe_button" type="button" onclick="Observe_button_onclick()">Observe</button>
+            </div>
+
+            <div id="blog_div">
+                <button id="blog_button" type="button" onclick="blog_button_onclick()">Blog</button>
+            </div>
+
+            <div id="center_div">
+                <button id="personal-center-button" type="button" onclick="center_button_onclick()">PersonalCenter</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    background-image: url('/背景.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#BeautifyImagesObserve {
+    margin-top: 50px;
+    text-align: center;
+    width: auto;
+    height: 500px;
+}
+
+#BeautifyImages_div, #Observe_div, #blog_div, #center_div {
+    width: 150px; /* 更窄的宽度 */
+    height: 70px;
+    color: #444444;
+    margin: 10px auto; /* 上下10px，水平居中 */
+}
+
+#BeautifyImages_button, #Observe_button, #blog_button, #personal-center-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333; /* 灰黑色系 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+#BeautifyImages_button:hover, #Observe_button:hover, #blog_button:hover, #personal-center-button:hover {
+    background-color: #555; /* 悬停时的颜色变化 */
+}

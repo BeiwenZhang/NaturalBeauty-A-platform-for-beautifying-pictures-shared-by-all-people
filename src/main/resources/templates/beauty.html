@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图像修图工具</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    #imageArea {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    #uploadedImage {
+      max-width: 100%;
+      max-height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>图像修图工具</h1>
+
+<!--&lt;!&ndash; 图片显示区域 &ndash;&gt;-->
+<!--<div id="imageArea" th:style="${uploadedImage ? 'display:block' : 'display:none'}">-->
+<!--&lt;!&ndash;  <img id="uploadedImage" alt="Uploaded Image" th:src="${#strings.replace(uploadedImage, '\'', '&#39;')'}" />&ndash;&gt;-->
+<!--</div>-->
+
+<!-- 将Thymeleaf变量的值传递到JavaScript变量中 -->
+<script th:inline="javascript">
+  var uploadedImageSrc = /*[[${uploadedImage}]]*/ '';
+</script>
+
+<!-- 显示上传的图片的JavaScript代码 -->
+<script th:inline="javascript">
+  function displayImage(input) {
+    var imageArea = document.getElementById("imageArea");
+    var uploadedImage = document.getElementById("uploadedImage");
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        uploadedImage.src = e.target.result;
+      };
+
+      reader.readAsDataURL(input.files[0]);
+
+      imageArea.style.display = "block"; // 显示图片区域
+    }
+  }
+</script>
+
+</body>
+</html>

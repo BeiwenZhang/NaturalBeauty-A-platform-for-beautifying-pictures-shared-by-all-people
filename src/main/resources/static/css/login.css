@@ -1,0 +1,20 @@
+/*#background {*/
+/*    background-color: #A9BDF7;*/
+/*    background-size: 100% 100%;*/
+/*    height: 100%;*/
+/*    position: fixed;*/
+/*    width: 100%*/
+/*}*/
+/* Other styles in your CSS file */
+
+/* Add the following styles for the background image */
+body {
+    background-image: url('/背景.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+

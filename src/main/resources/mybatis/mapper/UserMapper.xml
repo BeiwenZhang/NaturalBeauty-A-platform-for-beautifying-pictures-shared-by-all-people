@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zbw.NaturalBeauty.mapper.UserMapper">
+    <select id="queryUserList" resultType="User">
+        select * from user;
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into user (name, pwd) values (#{name}, #{pwd});
+    </insert>
+
+<!--    select在执行的 时候，查询的结果是一个对象或者多个对象，
+指定resultType表示查询的结果集类型，只需要指定对应映射类的类型，并且包含完整接口
+resultMap当表的资源和类的对象属性的字段不一致，就指定映射规则 -->
+    <select id="checkUserID" parameterType="map" resultType="Integer">
+        select id from user where name=#{name} and pwd = #{pwd};
+    </select>
+
+    <select id="checkUserName" parameterType="map" resultType="Integer">
+        select id from user where name=#{name};
+    </select>
+
+    <select id="queryUserById" parameterType="int" resultType="User">
+        select * from user where id = #{id};
+    </select>
+
+    <!-- 在 user 表中更新用户信息 -->
+    <update id="updateUserInfo" parameterType="User">
+        update user
+        set name = #{name},
+            MBTI = #{MBTI},
+            constellation = #{constellation},
+            gender = #{gender},
+            isVip = #{isVip}
+        where id = #{id};
+    </update>
+
+
+</mapper>

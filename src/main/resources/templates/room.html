@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Room</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/chat1.css}"/>
+    <script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/js/room.js}"></script>
+    <script type="text/javascript" th:src="@{/lib/face-api.js-master/dist/face-api.js}"></script>
+<!--  D:/idea-workplace/NaturalBeauty/src/lib/  -->
+    <link rel="shortcut icon" th:href="@{/icon.ico}"/>
+    <link rel="bookmark" th:href="@{/icon.ico}"/>
+
+
+
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="left-sidebar">
+
+    <button id="download-button">保存到本地</button>
+    <button id="undo-button">撤销一步</button>
+    <button id="restore-button">恢复原图</button>
+    <button id="share-button">分享到社群</button>
+    <button id="close-button">断开连接</button>
+    <hr> <!-- Horizontal line -->
+    <p>滤镜功能</p>
+    <button id="filter-button">共用滤镜</button>
+    <button id="male-filter-button">男生滤镜</button>
+    <button id="female-filter-button">女生滤镜</button>
+    <button id="facial-adjustment-button">五官精修</button>
+    <!-- Add your new buttons below this line -->
+</div>
+
+<div id="BeautifyImages_area">
+    <hr>
+    <label for="file_input">选择图片:</label>
+    <input type="file" id="file_input" accept="image/*">
+
+    <hr>
+
+    <output id="range_output" for="range1"></output>
+
+    <canvas id="canvas" width="720" height="480">不能识别</canvas>
+    <input id="clear_button" type="button" value="清空">
+</div>
+
+<!-- 添加滚动区域 -->
+<div id="scrollable-content">
+
+</div>
+
+<!--聊天界面-->
+<div id="chatBody">
+    <!--右侧-->
+    <div id="lists">
+        <!--在线列表-->
+        <ul style="background-color: darkgrey">在线列表</ul>
+        <div id="users_area">
+            <textarea id="text_users" readonly="readonly"></textarea>
+        </div>
+        <ul style="background-color: darkgrey">Chat Area</ul>
+        <div id="session_area">
+            <textarea id="text_session" readonly="readonly"></textarea>
+            <textarea id="tex_content" placeholder="请输入文字！"></textarea>
+            <input id="submit" type="button" value="发送">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

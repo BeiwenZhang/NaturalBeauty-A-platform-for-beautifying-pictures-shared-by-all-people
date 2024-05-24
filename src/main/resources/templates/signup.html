@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Sign up</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <script type="text/javascript" th:src="@{/js/fontawesome.js}"></script>
+    <script type="text/javascript" th:src="@{/js/signup.js}"></script>
+
+    <link rel="shortcut icon" th:href="@{/static/icon.ico}"/>
+    <link rel="bookmark" th:href="@{/static/icon.ico}"/>
+</head>
+
+<body>
+<div class="signinform">
+    <h1>BeautifyImages Signup Form</h1>
+    <!-- container -->
+    <div class="container">
+        <!-- main content -->
+        <div class="w3l-form-info">
+            <div class="w3_info">
+                <h2>Signup</h2>
+<!--                action="/register"-->
+                <form  >
+
+                    <!--                        name-->
+                    <div class="input-group">
+                        <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <input id="name" name="name" type="text" placeholder="Username or Email">
+                    </div>
+                    <!--                        pwd-->
+                    <div class="input-group">
+                        <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                        <input id="pwd" name="pwd" type="Password" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                        <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                        <input id="pwd2" name="pwd2" type="Password" placeholder="Password acknowledge">
+                    </div>
+
+                    <button id="signup_button" class="btn btn-primary btn-block" type="button" onclick="onclick_method()">Signup</button>
+                </form>
+            </div>
+        </div>
+        <!-- //main content -->
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <div class="footer">
+        <p>&copy; 2020 Service login form. All Rights Reserved | Design by <a href="https://github.com/ezyxz"
+                                                                              target="blank">XinyuanZuo</a></p>
+    </div>
+    <!-- footer -->
+</div>
+
+
+
+</body>
+
+</html>

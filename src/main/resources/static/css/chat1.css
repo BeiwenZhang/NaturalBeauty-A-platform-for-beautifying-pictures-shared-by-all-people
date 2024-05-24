@@ -1,0 +1,261 @@
+.talk_con {
+    width: 600px;
+    height: 500px;
+    border: 1px solid #666;
+    margin: 50px auto 0;
+    background: #f9f9f9;
+}
+
+.talk_show, .talk_input {
+    width: 580px;
+    border: 1px solid #666;
+    margin: 10px auto 0;
+}
+
+.talk_show {
+    height: 420px;
+    background: #fff;
+    overflow: auto;
+}
+
+.talk_word {
+    width: 420px;
+    height: 26px;
+    padding: 0px;
+    float: left;
+    margin-left: 10px;
+    outline: none;
+    text-indent: 10px;
+}
+
+.talk_sub, .whotalk {
+    width: 56px;
+    height: 30px;
+    float: left;
+    margin-left: 10px;
+    outline: none;
+}
+
+.atalk, .btalk {
+    margin: 10px;
+}
+
+.atalk span, .btalk span {
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+#chatBody {
+    border-style: solid;
+    border-color: black;
+    width: 60%;
+    height: 800px;
+    background-color: floralwhite;
+    margin-top: 50px;
+}
+
+#chatMain, #chatCnt, #chatArea {
+    border-style: solid;
+    margin-top: 10px;
+}
+
+#chatMain {
+    width: 40%;
+    float: left;
+    height: 40%;
+    margin-left: 5px;
+    display: inline;
+}
+
+#chatCnt, #chatArea {
+    width: 40%;
+    height: 30%;
+    margin-left: 15px;
+}
+
+#lists {
+    border-style: solid;
+    border-color: #33527E;
+    float: right;
+    width: 30%;
+    height: 95%;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+#session_area {
+    border-style: solid;
+    border-color: black;
+    float: bottom;
+    width: 99%;
+    height: 70%;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
+#users_area {
+    border-style: solid;
+    border-color: black;
+    float: top;
+    width: 99%;
+    height: 15%;
+}
+
+#tex_content {
+    border-style: solid;
+    float: left;
+    width: 75%;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#submit {
+    border-style: solid;
+    float: right;
+    width: 15%;
+    height: 40px;
+    background-color: darkgray;
+    margin-top: 20px;
+}
+
+#text_users {
+    width: 99%;
+    height: 110px;
+}
+
+#text_session {
+    width: 99%;
+    height: 450px;
+}
+
+#clear_button {
+    float: right;
+    height: 30px;
+    width: 70px;
+    margin-right: 5px;
+}
+
+#canvas {
+    background: #f9f9f9;
+    border: 2px black;
+    display: block;
+}
+
+#left-sidebar p {
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#left-sidebar {
+    background-color: black;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left-sidebar button {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+}
+
+#BeautifyImages_area {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 800px;
+    margin-left: 220px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    height: 400px;
+}
+
+#clear_button {
+    margin-top: 10px;
+}
+
+#scrollable-content {
+    overflow-y: auto;
+    height: 800px;
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: 0;
+    margin-top: 100px;
+}
+
+#scrollable-content button {
+    display: block;
+    width: 70px;
+    height: 100px;
+    margin-bottom: 5px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+
+}
+
+#scrollable-content button img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+#scrollable-content button span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+#filter-buttons button {
+    width: 70px;
+    margin: 0;
+    padding: 2px;
+    border: none;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+}
+
+#chatBody {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#lists {
+    flex: 1;
+    width: 60%;
+}
+
+#users_area {
+    flex: 1;
+    margin-top: 20px;
+}

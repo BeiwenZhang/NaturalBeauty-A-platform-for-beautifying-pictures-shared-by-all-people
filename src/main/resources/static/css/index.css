@@ -1,0 +1,31 @@
+#div_p1 {
+    text-align:center;
+}
+#div_input {
+
+    text-align:center;
+    margin-top: 70px;
+}
+
+#start_input {
+    text-align: center;
+    background-color: Pink;
+    height: 70px;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #ccc; /* 设置边框，宽度为2px，颜色为灰色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影效果，可根据需要调整阴影的偏移和模糊度 */
+}
+
+
+body {
+    background-image: url('/背景.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
