@@ -1,5 +1,6 @@
 # NaturalBeauty-A platform for beautifying pictures shared by all people
-- java，springboot，maven，thymeleaf，mybatis
+- 本项目是基于Spring Boot框架的Java应用，利用Maven进行项目管理和构建自动化。通过整合Thymeleaf模板引擎，实现了高效的页面渲染，同时采用MyBatis作为数据访问层框架，优化了数据库操作的灵活性和效率。
+
 
 - This is a pictures beautifying platform supporting over thirty types of filters including "Blur," "Negative," and "Grayscale," with features specifically developed for male users. It includes multi-person detection and chat room functions to facilitate team collaboration.
 
